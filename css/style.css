@@ -1,0 +1,460 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans", "Poppins", sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+header {
+  margin-top: 50px;
+}
+header .allhead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+header .allhead .headerbg {
+  width: 100%;
+  height: 300px;
+  top: 60px;
+}
+header .allhead .texts {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+}
+header .allhead .texts .one .headertxt {
+  width: 80vw;
+}
+header .allhead .texts .two {
+  display: flex;
+}
+header .allhead .texts .two .week {
+  color: white;
+  font-size: 50px;
+  font-weight: 900;
+}
+header .allhead .texts .two .date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: white;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-left: 20px;
+  transform: rotate(10deg);
+  border: solid 1px #c7bb95;
+}
+
+main .infoandcontact p {
+  font-weight: 400;
+}
+main .infoandcontact .info {
+  margin-top: 35px;
+}
+main .infoandcontact .info .box {
+  font-family: "DM Sans";
+}
+main .infoandcontact .info .box h1 {
+  margin-left: 35px;
+  font-size: 30px;
+}
+main .infoandcontact .info .box .undertxt {
+  margin-left: 35px;
+  font-size: 30px;
+}
+main .infoandcontact .info .box .longtxt {
+  margin: 0px 35px 35px 35px;
+  font-size: 14px;
+}
+main .infoandcontact .info .box .rectangle {
+  height: 2px;
+  width: 60px;
+  background-color: #cabf9a;
+  margin: 15px 35px;
+}
+main .infoandcontact .info .box span {
+  color: #cabf9a;
+}
+main .infoandcontact .info img {
+  width: 100%;
+  height: 95px;
+}
+main .infoandcontact .contact form .inputs {
+  font-family: "DM Sans";
+  background-color: #c7bb95;
+  padding: 35px;
+}
+main .infoandcontact .contact form .inputs p {
+  font-size: 30px;
+}
+main .infoandcontact .contact form .inputs p:nth-child(2) {
+  margin-bottom: 42px;
+}
+main .infoandcontact .contact form .inputs .formbox input,
+main .infoandcontact .contact form .inputs .formbox select {
+  background: none;
+  font-family: "DM Sans";
+  font-size: 14px;
+  color: black;
+  width: 270px;
+  border: none;
+  border-bottom: 1px solid white;
+  margin-bottom: 28px;
+  padding: 9px 0px;
+}
+main .infoandcontact .contact form .inputs .formbox input::-moz-placeholder {
+  color: black;
+}
+main .infoandcontact .contact form .inputs .formbox input::placeholder {
+  color: black;
+}
+main .infoandcontact .contact form .control-button .send {
+  background-image: linear-gradient(to right, #e4dbbf, #bcb18e, #95885e);
+  height: 95px;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "DM Sans";
+  font-size: 17px;
+  cursor: pointer;
+}
+main .infoandcontact .contact form .popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: -300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  border: 2px solid black;
+  transition: top 0.5s;
+}
+main .infoandcontact .contact form .popup p {
+  text-align: center;
+  font-size: 14px;
+}
+main .infoandcontact .contact form .popup .close {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10%;
+  background-color: #c7bb95;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+main .infoandcontact .contact form .popup .close:hover {
+  color: #ffffff;
+  background-color: #95885e;
+}
+main .infoandcontact .contact form .show-popup {
+  top: 150px;
+}
+main .infoandcontact .contact .rules {
+  margin-top: 18px;
+}
+main .infoandcontact .contact .rules .container {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  font-size: 9px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+main .infoandcontact .contact .rules .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+main .infoandcontact .contact .rules .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+main .infoandcontact .contact .rules .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+main .infoandcontact .contact .rules .container input:checked ~ .checkmark {
+  background-color: #ffffff;
+}
+main .infoandcontact .contact .rules .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+main .infoandcontact .contact .rules .container input:checked ~ .checkmark:after {
+  display: block;
+}
+main .infoandcontact .contact .rules .container .checkmark:after {
+  left: 10px;
+  top: 6px;
+  width: 6px;
+  height: 10px;
+  border: solid rgb(0, 0, 0);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.news {
+  margin-top: 35px;
+  margin-bottom: 55px;
+}
+.news h3 {
+  padding: 3px;
+  font-family: "DM Sans";
+  font-size: 30px;
+  font-weight: 200;
+  margin: 0 auto;
+  width: 170px;
+  border-bottom: 2px solid #95885e;
+}
+.news .newsboxes {
+  display: flex;
+  flex-direction: column;
+}
+.news .newsboxes .singlenews {
+  margin-top: 20px;
+}
+.news .newsboxes .singlenews .content {
+  margin: 25px;
+  padding: 30px;
+  box-shadow: -1px 6px 24px -10px rgb(66, 68, 90);
+}
+.news .newsboxes .singlenews .content h2 {
+  font-family: "Poppins";
+  font-size: 25px;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+.news .newsboxes .singlenews .content img {
+  width: 100%;
+  height: 230px;
+  padding-bottom: 15px;
+}
+.news .newsboxes .singlenews .content .admission {
+  padding-bottom: 15px;
+  font-family: "DM Sans";
+  font-size: 14px;
+}
+.news .newsboxes .singlenews .content .readmorebtn {
+  border: 2px solid #95885e;
+  background: none;
+  padding: 7px;
+  cursor: pointer;
+  font-family: "DM Sans";
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  width: 100%;
+  background-color: #95885e;
+}
+footer p, footer a {
+  font-family: "DM Sans";
+  font-size: 18px;
+  padding-top: 5px;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  header .allhead .headerbg {
+    height: 500px;
+  }
+  header .allhead .texts .two .week {
+    margin-top: -15px;
+    font-size: 90px;
+  }
+  header .allhead .texts .two .date {
+    font-size: 20px;
+    padding: 8px;
+    height: 80px;
+  }
+  main .infoandcontact {
+    display: flex;
+    width: 100%;
+  }
+  main .infoandcontact .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 40px;
+    width: 50%;
+  }
+  main .infoandcontact .info .box {
+    padding-left: 130px;
+  }
+  main .infoandcontact .info .box .rectangle {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  main .infoandcontact .info .box .longtxt {
+    padding-right: 70px;
+  }
+  main .infoandcontact .info img {
+    padding-left: 90px;
+  }
+  main .infoandcontact .contact {
+    margin-top: -35px;
+    width: 50%;
+  }
+  main .infoandcontact .contact form .inputs {
+    padding-top: 80px;
+    padding-left: 85px;
+  }
+  main .infoandcontact .contact form .inputs .formbox input,
+  main .infoandcontact .contact form .inputs .formbox select {
+    width: 400px;
+  }
+  main .infoandcontact .contact form .inputs .rules {
+    width: 400px;
+  }
+  main .infoandcontact .contact form .control-button {
+    padding-right: 90px;
+  }
+  main .infoandcontact .contact form .popup {
+    width: 600px;
+  }
+  main .infoandcontact .contact form .popup p {
+    font-size: 28px;
+  }
+  .news .newsboxes {
+    flex-direction: row;
+  }
+  .news .newsboxes .singlenews {
+    width: 50%;
+  }
+  .news .newsboxes .singlenews .content {
+    margin: 25px 50px;
+  }
+  .news .newsboxes .singlenews .content img {
+    width: 80%;
+  }
+  .news .newsboxes .singlenews .content .admission {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1700px) {
+  header {
+    margin-top: 175px;
+  }
+  header .allhead .headerbg {
+    height: 800px;
+  }
+  header .allhead .texts .one .headertxt {
+    width: 1540px;
+    height: 325px;
+  }
+  header .allhead .texts .two .week {
+    margin-top: -30px;
+    font-size: 200px;
+  }
+  header .allhead .texts .two .date {
+    margin-top: 40px;
+    margin-left: 50px;
+    font-size: 46px;
+    padding: 70px 30px;
+    border: solid 7px #c7bb95;
+  }
+  main .infoandcontact .info {
+    padding-top: 60px;
+  }
+  main .infoandcontact .info .box {
+    padding-left: 236px;
+  }
+  main .infoandcontact .info .box h1,
+  main .infoandcontact .info .box .undertxt {
+    font-size: 52px;
+    margin-left: 0;
+  }
+  main .infoandcontact .info .box .rectangle {
+    margin: 45px 0px;
+  }
+  main .infoandcontact .info .box .longtxt {
+    font-size: 18px;
+    margin: 0;
+  }
+  main .infoandcontact .info img {
+    padding-left: 140px;
+  }
+  main .infoandcontact .contact {
+    margin-top: -55px;
+  }
+  main .infoandcontact .contact form .inputs {
+    padding-top: 110px;
+    padding-left: 135px;
+  }
+  main .infoandcontact .contact form .inputs p {
+    font-size: 40px;
+  }
+  main .infoandcontact .contact form .inputs .formbox input,
+  main .infoandcontact .contact form .inputs .formbox select {
+    font-size: 18px;
+  }
+  main .infoandcontact .contact form .control-button {
+    padding-right: 140px;
+  }
+  main .infoandcontact .contact form .control-button .send {
+    font-size: 22px;
+  }
+  main .infoandcontact .contact .rules .container {
+    font-size: 11px;
+  }
+  .news h3 {
+    font-size: 40px;
+    width: 230px;
+  }
+  .news .newsboxes .singlenews .content {
+    margin: 25px 50px;
+  }
+  .news .newsboxes .singlenews .content h2 {
+    font-size: 40px;
+  }
+  .news .newsboxes .singlenews .content img {
+    height: 270px;
+  }
+  .news .newsboxes .singlenews .content .admission {
+    font-size: 18px;
+  }
+  .news .newsboxes .singlenews .content .readmorebtn {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=style.css.map */
